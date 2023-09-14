@@ -4,7 +4,7 @@
 
 
 
-function calcularMedia (nota1: number, nota2: number): (number | boolean){
+function calcularMedia (nota1: number, nota2: number): boolean {
 const media: number =(nota1 + nota2) / 2;
 if (media >= 6) {
     return true
@@ -12,7 +12,7 @@ if (media >= 6) {
     return false}
 }
 
-const Notafinal: number | boolean = calcularMedia (5,3)
+const Notafinal: boolean = calcularMedia (5,3)
 console.log(`O Aluno esta aprovado? ${Notafinal}`)
 
 
