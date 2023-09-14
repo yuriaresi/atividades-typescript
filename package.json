@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "name": "atividades-typescript",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "scripts": {
+    "1": "nodemon ./src/1.ts",
+    "2": "nodemon ./src/2.ts",
+    "3": "nodemon ./src/3.ts",
+    "4": "nodemon ./src/4.ts",
+    "5": "nodemon ./src/5.ts",
+    "6": "nodemon ./src/6.ts",
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.6.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.2.2"
+  },
+  "description": ""
+}
