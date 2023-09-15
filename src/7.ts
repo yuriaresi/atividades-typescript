@@ -22,7 +22,7 @@ type usuario = {
 type diretorOuUsuario = diretor | usuario;
 
 const lista: diretorOuUsuario[] = [
-    { nome: 'Gabrieli', idade: 27, comissao: 'nivel 5', salario: 3600 },
+    { nome: 'Gabrieli', idade: 27, comissao: 'nivel 5', salario: 35000 },
     { nome: 'Daphine', idade: 23, ocupacao: 'analista de TI' },
 ]
 
@@ -31,7 +31,7 @@ function detalhes(lista: diretorOuUsuario[]) {
         if ('ocupacao' in item) {
             console.log(`Usuario(a) ${item.nome}, ${item.idade} anos, ${item.ocupacao}, ${item.salario ? item.salario : "N/A"}`)
         } else {
-            console.log(`Diretor(a) ${item.nome}, ${item.idade} anos, ${item.comissao}, ${item.salario ? item.salario : "N/A"}`)
+            console.log(`Diretor(a) ${item.nome}, ${item.idade} anos, ${item.comissao}, R$:${item.salario ? item.salario : "N/A"}`)
         }
     })
 
