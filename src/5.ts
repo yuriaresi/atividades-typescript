@@ -5,28 +5,25 @@
 // a. “Daphne, 23 anos, analista de TI, salário R$ 1000”
 // b. “Daphne, 23 anos, analista de TI, salário N/A”
 
-type user = {
+ class User {
     nome: string;
     idade: number;
     ocupacao: string;
-    salario?: number | string;
+    salario?: number;
+
+    constructor(nome: string, idade: number, ocupacao: string, salario?: number){
+        this.nome = nome
+        this.idade = idade
+        this.ocupacao = ocupacao
+        this.salario = salario
+}
 }
 
-export const user1: user = {
-    nome: "Gabrieli",
-    idade: 27,
-    ocupacao: "analista de engenharia",
-    salario: 3600
-}
-
-export const user2: user = {
-    nome: "Daphne",
-    idade: 23,
-    ocupacao: "analista de TI"
-}
+ const user1= new User ("Gabrieli", 27, "analista de engenharia", 3600)
+  const user2 = new User ('Daphney', 23,"analista de TI")
 
 
-function informacaoUsuario(user: user): string {
+function informacaoUsuario(user: User): string {
     return `${user.nome}, ${user.idade} anos, ${user.ocupacao}, ${user.salario ? user.salario : "N/A"}`
 }
 

@@ -7,28 +7,26 @@
 // b. “Diretor(a) Daphne, 23 anos, comissão nível 5, salário N/A”
 
 
-type diretor = {
+  class Diretor {
     nome: string;
     idade: number;
     comissao: string;
-    salario?: number | string;
+    salario?: number;
+
+constructor(nome: string, idade: number, comissao: string, salario?: number){
+    this.nome = nome;
+    this.idade = idade;
+    this.comissao = comissao;
+    this.salario = salario;
+  }
 }
 
-const diretor1: diretor = {
-    nome: 'Gabrieli',
-    idade: 27,
-    comissao: 'comissão nivel 5',
-    salario: 3600
-}
+ const diretor1 = new Diretor("Gabrieli", 27, "comissão nivel 5", 5000) 
 
-const diretor2: diretor = {
-    nome: 'Daphne',
-    idade: 23,
-    comissao: 'comissão nivel 5'
-}
+const diretor2 = new Diretor("Daphine", 23, "comissão nivel 5")
 
-function informacaoDiretor(diretor: diretor): string {
-    return `Diretor(a) ${diretor.nome}, ${diretor.idade} anos, ${diretor.comissao}, ${diretor.salario ? diretor.salario : "N/A"}`
+function informacaoDiretor(Diretor: Diretor): string {
+    return `Diretor(a) ${Diretor.nome}, ${Diretor.idade} anos, ${Diretor.comissao}, ${Diretor.salario ? Diretor.salario : "N/A"}`
 }
 
 console.log(informacaoDiretor(diretor1));
